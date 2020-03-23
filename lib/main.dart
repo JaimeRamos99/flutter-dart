@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'first_section.dart';
-//import 'second_section.dart';
+import 'second_section.dart';
 
 void main() => runApp(MyApp());
 
@@ -14,10 +14,9 @@ class MyApp extends StatelessWidget {
         ),
         home: Scaffold(
           appBar: FirstSection(
-              title: Text('holu', style: TextStyle(color: Color(0xFF307BFF)),),
-              appBar: AppBar(),
-              widgets: <Widget>[Icon(Icons.menu)]),
-          //body: new SecondSection(),
+            appBar: AppBar(),
+          ),
+          body: new SecondSection(),
         ));
   }
 }

@@ -1,26 +1,19 @@
 import 'package:flutter/material.dart';
 
 class FirstSection extends StatelessWidget implements PreferredSizeWidget {
-  final Color backgroundColor = Colors.white;
-  final Text title;
   final AppBar appBar;
-  final List<Widget> widgets;
 
-  /// you can add more fields that meet your needs
+  /// you can add more fields tat meet your needs
 
-  const FirstSection({Key key, this.title, this.appBar, this.widgets})
-      : super(key: key);
+  const FirstSection({Key key, this.appBar}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
-    final navbar =Row(
-    children:<Widget>[
-    Container(
-    child:Text("hola"))]
+    final main1 = Container(
+      color: Colors.yellow,
+      width: MediaQuery.of(context).size.width,
     );
-    return navbar;
-
+    return main1;
   }
 
   @override
