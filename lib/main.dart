@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
         home: Scaffold(
           appBar: FirstSection(
             appBar: AppBar(),
+            pathImage: "assets/holu-logo.png",
           ),
           body: Container(
             color: Colors.grey,
