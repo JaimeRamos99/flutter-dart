@@ -16,7 +16,10 @@ class MyApp extends StatelessWidget {
           appBar: FirstSection(
             appBar: AppBar(),
           ),
-          body: new SecondSection(),
+          body: Container(
+            color: Colors.grey,
+            child: new SecondSection(),
+          ),
         ));
   }
 }
