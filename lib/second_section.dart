@@ -1,23 +1,20 @@
 import 'package:flutter/material.dart';
-import 'third_section.dart';
 
 class SecondSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final cuadricula =Container(
+    final cuadricula = Container(
       height: MediaQuery.of(context).size.height * 0.1,
       width: MediaQuery.of(context).size.height * 0.3,
       decoration: BoxDecoration(
-          border: Border(
-              bottom: BorderSide(color: Colors.grey, width: 1))),
+          border: Border(bottom: BorderSide(color: Colors.grey, width: 1))),
     );
-    final cuadriculaLLena =Container(
+    final cuadriculaLLena = Container(
       height: MediaQuery.of(context).size.height * 0.1,
       width: MediaQuery.of(context).size.height * 0.3,
       decoration: BoxDecoration(
-          color:Colors.blueGrey,
-          border: Border(
-              bottom: BorderSide(color: Colors.grey, width: 1))),
+          color: Colors.blueGrey,
+          border: Border(bottom: BorderSide(color: Colors.grey, width: 1))),
     );
     final home = Container(
       padding: new EdgeInsets.only(
@@ -97,7 +94,12 @@ class SecondSection extends StatelessWidget {
                 bottomRight: const Radius.circular(10.0),
               )),
           child: Column(children: <Widget>[
-            cuadricula, cuadriculaLLena, cuadricula, cuadricula, cuadricula, cuadricula
+            cuadricula,
+            cuadriculaLLena,
+            cuadricula,
+            cuadricula,
+            cuadricula,
+            cuadricula
           ])),
       Row(children: <Widget>[
         Container(

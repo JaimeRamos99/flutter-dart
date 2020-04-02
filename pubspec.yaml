@@ -60,10 +60,21 @@ flutter:
     - family: Chlight
       fonts:
         - asset: fonts/CooperHewitt-Light.ttf
-        - asset: fonts/CooperHewitt-Bold.ttf
     - family: Chbold
       fonts:
         - asset: fonts/CooperHewitt-Bold.ttf
+    - family: Chthin
+      fonts:
+        - asset: fonts/CooperHewitt-Thin.ttf
+    - family: Chmedium
+      fonts:
+        - asset: fonts/CooperHewitt-Medium.ttf
+    - family: Chbook
+      fonts:
+        - asset: fonts/CooperHewitt-Book.ttf
+    - family: Chheavy
+      fonts:
+        - asset: fonts/CooperHewitt-Heavy.ttf
   # fonts:
   #   - family: Chlight
   #     fonts:
