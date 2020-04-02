@@ -27,7 +27,7 @@ class Categories extends StatelessWidget {
             BoxDecoration(color: Color(0xFFFFC4B7), shape: BoxShape.circle),
         child: Icon(
           Icons.fastfood,
-          size: MediaQuery.of(context).size.width * 0.11,
+          size: MediaQuery.of(context).size.width * 0.10,
         ));
     final beerContainer = Container(
         width: MediaQuery.of(context).size.width * 0.18,
@@ -39,7 +39,7 @@ class Categories extends StatelessWidget {
             BoxDecoration(color: Color(0xFFFFC4B7), shape: BoxShape.circle),
         child: Icon(
           Icons.local_bar,
-          size: MediaQuery.of(context).size.width * 0.11,
+          size: MediaQuery.of(context).size.width * 0.10,
         ));
     final grillContainer = Container(
         width: MediaQuery.of(context).size.width * 0.18,
@@ -51,7 +51,7 @@ class Categories extends StatelessWidget {
             BoxDecoration(color: Color(0xFFFFC4B7), shape: BoxShape.circle),
         child: Icon(
           MyFlutterApp.outdoor_grill_black_18dp,
-          size: MediaQuery.of(context).size.width * 0.11,
+          size: MediaQuery.of(context).size.width * 0.10,
         ));
     return Container(
       margin: new EdgeInsets.only(
