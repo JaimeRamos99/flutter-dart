@@ -75,6 +75,9 @@ flutter:
     - family: Chheavy
       fonts:
         - asset: fonts/CooperHewitt-Heavy.ttf
+    - family: MyFlutterApp
+      fonts:
+        - asset: fonts/MyFlutterApp.ttf
   # fonts:
   #   - family: Chlight
   #     fonts:

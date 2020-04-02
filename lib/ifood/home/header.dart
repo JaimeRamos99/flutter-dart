@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Header extends StatelessWidget {
-  //favorite, shopping_basket, local_pizza, fastfood, local_drink
+
   @override
   Widget build(BuildContext context) {
     final basketIcon = Container(
