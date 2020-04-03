@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import './ifood/home/index.dart';
+//import './ifood/home/index.dart';
+import './ifood/restaurant/index.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
         home: Scaffold(
           body: Container(
             color: Colors.white,
-            child: indexHome(),
+            child: indexRestaurant(),
           )
           ,
         )

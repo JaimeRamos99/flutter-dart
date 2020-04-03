@@ -12,7 +12,7 @@ class Lista extends StatelessWidget {
         top: MediaQuery.of(context).size.height * 0.01,
       ),
       width: MediaQuery.of(context).size.width * 0.86,
-      height: MediaQuery.of(context).size.height * 0.55,
+      height: MediaQuery.of(context).size.height * 0.57,
       decoration: BoxDecoration(
           //color: Colors.greenAccent,
           ),
@@ -43,7 +43,7 @@ class Lista extends StatelessWidget {
               restaurantName: "Salvator´s pizza",
               puntaje: "4,4",
               tiempo: "15-20 min",
-              distancia: "1,0 km")
+              distancia: "1,0 km"),
         ],
       ),
     );
