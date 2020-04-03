@@ -49,6 +49,11 @@ flutter:
      - assets/pizza4.jpg
      - assets/dona1.jpg
      - assets/dona2.jpg
+     - assets/dona3.jpg
+     - assets/dona4.jpg
+     - assets/dona5.jpg
+     - assets/dona6.jpg
+     - assets/dona7.jpg
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
