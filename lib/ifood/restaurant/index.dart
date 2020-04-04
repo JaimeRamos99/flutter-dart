@@ -11,7 +11,7 @@ class indexRestaurant extends StatelessWidget {
         nombre: "New York Donut Co.",
         calificacion: "4,0",
         categoria: " |  Cómida rápida",
-        tiempo:" | 15-25 min",
+        tiempo: " | 15-25 min",
         reviews: " 24 reviews",
         imagenRestaurante: "assets/dona1.jpg",
       )
