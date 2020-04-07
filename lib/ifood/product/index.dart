@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import '../restaurant/appbar.dart';
+import 'first.dart';
+import 'second.dart';
+import 'third.dart';
 
 class Product extends StatelessWidget {
   @override
@@ -7,7 +10,10 @@ class Product extends StatelessWidget {
     final appbar = Row(
       children: <Widget>[Appbar()],
     );
-    final contenido = Container();
+    final contenido = Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[FirstProduct(), SecondProduct(), ThirdProduct()],
+    );
     return Stack(
       children: <Widget>[contenido, appbar],
     );
