@@ -58,7 +58,6 @@ class FirstSection extends StatelessWidget {
       ),
     );
     final listaContainer = Container(
-      color: Colors.yellow,
       height: MediaQuery.of(context).size.height * 0.50,
       margin: new EdgeInsets.only(
           left: MediaQuery.of(context).size.width * 0.05,
@@ -70,7 +69,7 @@ class FirstSection extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height * 0.85,
       decoration: BoxDecoration(
-          color: Color(0xFF530566),
+          color: Color(0xFF4A056C),
           borderRadius: new BorderRadius.only(
               bottomRight: Radius.circular(50),
               bottomLeft: Radius.circular(50))),
