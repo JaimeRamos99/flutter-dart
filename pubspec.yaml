@@ -101,6 +101,9 @@ flutter:
     - family: Circle
       fonts:
         - asset: fonts/Circle.ttf
+    - family: Thumbs
+      fonts:
+        - asset: fonts/Thumbs.ttf
   # fonts:
   #   - family: Chlight
   #     fonts:

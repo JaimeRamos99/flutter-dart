@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import './ifood/cart/index.dart';
+import './ifood/splash/index.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
             home: Scaffold(
               body: Container(
                   color: Color(0xFFFACBCD),
-                child: Cart(),
+                child: Splash(),
               ),
             )));
   }
