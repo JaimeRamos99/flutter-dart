@@ -14,8 +14,12 @@ class Product extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[FirstProduct(), SecondProduct(), ThirdProduct()],
     );
-    return Stack(
-      children: <Widget>[contenido, appbar],
+    return Scaffold(
+      body: Container(
+        child: Stack(
+          children: <Widget>[contenido, appbar],
+        ),
+      ),
     );
   }
 }

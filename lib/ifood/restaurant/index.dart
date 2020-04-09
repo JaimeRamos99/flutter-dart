@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'abajo.dart';
 import 'arriba.dart';
 
-class indexRestaurant extends StatelessWidget {
+class IndexRestaurant extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final abajo = Row(children: <Widget>[Abajo()]);
@@ -17,8 +17,12 @@ class indexRestaurant extends StatelessWidget {
       )
     ]);
 
-    return Stack(
-      children: <Widget>[abajo, arriba],
+    return Scaffold(
+      body: Container(
+        child: Stack(
+          children: <Widget>[abajo, arriba],
+        ),
+      ),
     );
   }
 }

@@ -53,6 +53,11 @@ class Splash extends StatelessWidget {
         ],
       ),
     );
-    return todo;
+    return Scaffold(
+      body: Container(
+        color: Color(0xFFFACBCD),
+        child: todo,
+      ),
+    );
   }
 }

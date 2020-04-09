@@ -10,6 +10,10 @@ class Cart extends StatelessWidget {
         children: <Widget>[FirstSection(), SecondSection()],
       ),
     );
-    return todo;
+    return Scaffold(
+        body: Container(
+      color: Color(0xFFFACBCD),
+      child: todo,
+    ));
   }
 }

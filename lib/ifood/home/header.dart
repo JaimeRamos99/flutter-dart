@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 
 class Header extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
-    final basketIcon = Container(
-        child: Icon(
-          Icons.shopping_basket,
-          size: 30,
-        ),
-        margin: new EdgeInsets.only(
-            top: MediaQuery.of(context).size.height * 0.025));
+    final basketIcon = InkWell(
+      onTap: (){Navigator.pushNamed(context, '/cart');},
+      child: Container(
+          child: Icon(
+            Icons.shopping_basket,
+            size: 30,
+          ),
+          margin: new EdgeInsets.only(
+              top: MediaQuery.of(context).size.height * 0.025)),
+    );
     final favoriteIcon = Container(
         child: Icon(
           Icons.favorite,
@@ -26,8 +28,8 @@ class Header extends StatelessWidget {
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height * 0.08,
           decoration: BoxDecoration(
-            //color: Colors.red,
-          ),
+              //color: Colors.red,
+              ),
           child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[basketIcon, favoriteIcon]),
@@ -44,8 +46,8 @@ class Header extends StatelessWidget {
             left: MediaQuery.of(context).size.width * 0.04,
           ),
           decoration: BoxDecoration(
-            //color: Colors.lightBlueAccent,
-          ),
+              //color: Colors.lightBlueAccent,
+              ),
           child: Column(
             children: <Widget>[
               Row(children: <Widget>[
