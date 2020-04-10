@@ -5,6 +5,7 @@ import './ifood/cart/index.dart';
 import './ifood/product/index.dart';
 import './ifood/home/index.dart';
 import './ifood/restaurant/index.dart';
+import './ifood/favorites/index.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,13 +18,14 @@ class MyApp extends StatelessWidget {
         ),
         child: MaterialApp(
           title: 'Holu',
-          initialRoute: '/home',
+          initialRoute: '/favorites',
           routes: {
             '/': (context) => IndexHome(),
             '/restaurant': (context) => IndexRestaurant(),
             '/product': (context) => Product(),
             '/cart': (context) => Cart(),
-            '/splash': (context) => Splash()
+            '/splash': (context) => Splash(),
+            '/favorites': (context) => Favoritos(),
           },
         ));
   }
