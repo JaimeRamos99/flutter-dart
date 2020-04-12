@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import './ifood/splash/index.dart';
-import './ifood/cart/index.dart';
-import './ifood/product/index.dart';
-import './ifood/home/index.dart';
-import './ifood/restaurant/index.dart';
-import './ifood/favorites/index.dart';
+import './ifood/landing/ui/index.dart';
+import './ifood/cart/ui/index.dart';
+import './ifood/product/ui/index.dart';
+import './ifood/home/ui/index.dart';
+import './ifood/restaurant/ui/index.dart';
+import './ifood/favorites/ui/index.dart';
 
 void main() => runApp(MyApp());
 
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         ),
         child: MaterialApp(
           title: 'Holu',
-          initialRoute: '/favorites',
+          initialRoute: '/',
           routes: {
             '/': (context) => IndexHome(),
             '/restaurant': (context) => IndexRestaurant(),

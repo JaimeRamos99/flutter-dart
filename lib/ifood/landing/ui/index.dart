@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../../utils/thumbs_icons.dart';
+import '../../../utils/thumbs_icons.dart';
 
 class Splash extends StatelessWidget {
   @override
@@ -13,10 +13,12 @@ class Splash extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Container(
+              margin: new EdgeInsets.only(
+                  top: MediaQuery.of(context).size.height * 0.20),
               child: Icon(
-            Thumbs.emo_thumbsup,
-            size: 80,
-          )),
+                Thumbs.emo_thumbsup,
+                size: 80,
+              )),
           Container(
             margin: new EdgeInsets.only(
                 top: MediaQuery.of(context).size.height * 0.05),
@@ -42,7 +44,8 @@ class Splash extends StatelessWidget {
                     topLeft: Radius.circular(25))),
             margin: new EdgeInsets.only(
                 left: MediaQuery.of(context).size.width * 0.05,
-                top: MediaQuery.of(context).size.height * 0.15),
+                top: MediaQuery.of(context).size.height * 0.15,
+                bottom: MediaQuery.of(context).size.height * 0.13),
             child: Text(
               "Somos los más RAPPIdos",
               style: TextStyle(
@@ -50,6 +53,31 @@ class Splash extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ),
+          Container(
+            height: MediaQuery.of(context).size.height * 0.10,
+            width: MediaQuery.of(context).size.width,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                FlatButton(
+                  onPressed: () {
+                    /*...*/
+                  },
+                  child: Text(
+                    "Regístrate", style: TextStyle(fontFamily: "chmedium", fontSize: 17),
+                  ),
+                ),
+                FlatButton(
+                  onPressed: () {
+                    /*...*/
+                  },
+                  child: Text(
+                    "Inicia sesión", style: TextStyle(fontFamily: "chmedium", fontSize: 17)
+                  ),
+                )
+              ],
+            ),
+          )
         ],
       ),
     );

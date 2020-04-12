@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../utils/circle_icons.dart';
+import '../../../utils/circle_icons.dart';
 
 class ItemPunto extends StatelessWidget {
   final String nombre;

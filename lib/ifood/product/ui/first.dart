@@ -62,17 +62,17 @@ class FirstProduct extends StatelessWidget {
               )),
           Container(
               child: Column(
-            children: <Widget>[
-              Text(
-                "People",
-                style: TextStyle(fontFamily: "chbold", fontSize: 18),
-              ),
-              Text(
-                "1 person",
-                style: TextStyle(fontFamily: "chbold", fontSize: 18, color: Colors.pinkAccent),
-              ),
-            ],
-          )),
+                children: <Widget>[
+                  Text(
+                    "People",
+                    style: TextStyle(fontFamily: "chbold", fontSize: 18),
+                  ),
+                  Text(
+                    "1 person",
+                    style: TextStyle(fontFamily: "chbold", fontSize: 18, color: Colors.pinkAccent),
+                  ),
+                ],
+              )),
         ],
       ),
     );

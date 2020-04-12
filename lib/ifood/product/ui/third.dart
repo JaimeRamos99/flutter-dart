@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../utils/hearth_icon_icons.dart';
+import '../../../utils/hearth_icon_icons.dart';
 
 class ThirdProduct extends StatelessWidget {
   @override

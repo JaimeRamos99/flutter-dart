@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../utils/my_flutter_app_icons.dart';
-import '../../utils/pasta_icons.dart';
+import '../../../utils/my_flutter_app_icons.dart';
+import '../../../utils/pasta_icons.dart';
 class Categories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
