@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../../utils/thumbs_icons.dart';
 
-class Splash extends StatelessWidget {
+class Landing extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final todo = Container(
