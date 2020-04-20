@@ -13,6 +13,7 @@ import './ifood/product/bloc/bloc_product.dart';
 import './ifood/home/bloc/bloc_home.dart';
 import './ifood/restaurant/bloc/bloc_restaurant.dart';
 import './ifood/favorites/bloc/bloc_favorites.dart';
+import './ifood/favorites/repository/api.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 
 void main() => runApp(MyApp());
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
         child: BlocProvider(
           child: MaterialApp(
             title: 'Holu',
-            initialRoute: '/',
+            initialRoute: '/prueba',
             routes: {
               '/': (context) => BlocProvider(
                     child: IndexHome(),
@@ -51,6 +52,10 @@ class MyApp extends StatelessWidget {
                     child: Favoritos(),
                     bloc: FavoritesBloc(),
                   ),
+              '/prueba':(context) => BlocProvider(
+                child: MyApp2(),
+                bloc: FavoritesBloc(),
+              )
             },
           ),
           bloc: UserBloc(),
