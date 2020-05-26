@@ -4,7 +4,9 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final basketIcon = InkWell(
-      onTap: (){Navigator.pushNamed(context, '/cart');},
+      onTap: () {
+        Navigator.pushNamed(context, '/cart');
+      },
       child: Container(
           child: Icon(
             Icons.shopping_basket,
@@ -13,15 +15,19 @@ class Header extends StatelessWidget {
           margin: new EdgeInsets.only(
               top: MediaQuery.of(context).size.height * 0.025)),
     );
-    final favoriteIcon = Container(
-        child: Icon(
-          Icons.favorite,
-          size: 30,
-        ),
-        margin: new EdgeInsets.only(
-            top: MediaQuery.of(context).size.height * 0.025,
-            left: MediaQuery.of(context).size.width * 0.05,
-            right: MediaQuery.of(context).size.width * 0.04));
+    final favoriteIcon = InkWell(
+        onTap: () {
+          Navigator.pushNamed(context, '/favorites');
+        },
+        child: Container(
+            child: Icon(
+              Icons.favorite,
+              size: 30,
+            ),
+            margin: new EdgeInsets.only(
+                top: MediaQuery.of(context).size.height * 0.025,
+                left: MediaQuery.of(context).size.width * 0.05,
+                right: MediaQuery.of(context).size.width * 0.04)));
     final firstSection = Row(
       children: <Widget>[
         Container(

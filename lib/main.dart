@@ -28,7 +28,8 @@ class MyApp extends StatelessWidget {
         child: BlocProvider(
           child: MaterialApp(
             title: 'Holu',
-            initialRoute: '/prueba',
+            debugShowCheckedModeBanner: false,
+            initialRoute: '/',
             routes: {
               '/': (context) => BlocProvider(
                     child: IndexHome(),
