@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:toast/toast.dart';
 
-class ItemLista extends StatelessWidget {
+class ItemLista extends StatefulWidget {
   final String pathImage;
   final String restaurantName;
   final String puntaje;
   final String tiempo;
   final String distancia;
 
-  const ItemLista(
+  ItemLista(
       {Key key,
       this.pathImage,
       this.restaurantName,
@@ -15,6 +16,28 @@ class ItemLista extends StatelessWidget {
       this.tiempo,
       this.distancia})
       : super(key: key);
+
+  @override
+  _ItemLista createState() => new _ItemLista();
+}
+
+class _ItemLista extends State<ItemLista> {
+  bool _isLoved = false;
+  Color _heartColor = Colors.grey;
+
+  void _toggleFavorite() {
+    setState(() {
+      if (_isLoved) {
+        _isLoved = false;
+        _heartColor = Colors.grey;
+        Toast.show("Se ha eliminado de tus restaurantes favoritos", context, duration: Toast.LENGTH_LONG, gravity:  Toast.BOTTOM);
+      } else {
+        _isLoved = true;
+        _heartColor = Colors.redAccent;
+        Toast.show("Se ha agregado a restaurantes favoritos", context, duration: Toast.LENGTH_LONG, gravity:  Toast.BOTTOM);
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -29,8 +52,8 @@ class ItemLista extends StatelessWidget {
           ],
           shape: BoxShape.rectangle,
           //color: Colors.red,
-          image:
-              DecorationImage(fit: BoxFit.fill, image: AssetImage(pathImage)),
+          image: DecorationImage(
+              fit: BoxFit.fill, image: AssetImage(widget.pathImage)),
           borderRadius: BorderRadius.circular(20)),
       height: MediaQuery.of(context).size.height * 0.12,
       width: MediaQuery.of(context).size.width * 0.23,
@@ -52,7 +75,7 @@ class ItemLista extends StatelessWidget {
             children: <Widget>[
               Container(
                   child: Text(
-                restaurantName,
+                widget.restaurantName,
                 style: TextStyle(
                   fontFamily: "Chheavy",
                   fontSize: 17.0,
@@ -72,7 +95,7 @@ class ItemLista extends StatelessWidget {
                   color: Colors.amber,
                 ),
               ),
-              Text(puntaje,
+              Text(widget.puntaje,
                   style: TextStyle(
                     fontFamily: "Chbold",
                     fontSize: 14.0,
@@ -84,9 +107,15 @@ class ItemLista extends StatelessWidget {
                   )),
               Container(
                   margin: new EdgeInsets.only(
-                      left: MediaQuery.of(context).size.height * 0.07),
-                  child:
-                      Icon(Icons.favorite, size: 25, color: Colors.redAccent))
+                      left: MediaQuery.of(context).size.height * 0.05),
+                  child: IconButton(
+                    icon: (Icon(Icons.favorite)),
+                    iconSize: 25,
+                    color: _heartColor,
+                    onPressed: () {
+                      _toggleFavorite();
+                    },
+                  ))
             ],
           ),
           Row(
@@ -94,7 +123,7 @@ class ItemLista extends StatelessWidget {
               Container(
                 alignment: Alignment(0.0, 0.0),
                 width: MediaQuery.of(context).size.width * 0.30,
-                height: MediaQuery.of(context).size.width * 0.06,
+                height: MediaQuery.of(context).size.width * 0.05,
                 decoration: BoxDecoration(
                     color: Color(0xFFEEE4FF),
                     borderRadius: BorderRadius.circular(10)
@@ -111,7 +140,7 @@ class ItemLista extends StatelessWidget {
                           left: MediaQuery.of(context).size.width * 0.02,
                           top: MediaQuery.of(context).size.height * 0.005),
                       child: Text(
-                        tiempo,
+                        widget.tiempo,
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             fontFamily: "Chmedium",
@@ -126,7 +155,7 @@ class ItemLista extends StatelessWidget {
                 margin: new EdgeInsets.only(
                     left: MediaQuery.of(context).size.width * 0.03),
                 child: Text(
-                  distancia,
+                  widget.distancia,
                   style: TextStyle(
                     fontFamily: "Chlight",
                     fontSize: 13,

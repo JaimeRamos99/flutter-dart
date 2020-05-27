@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
           child: MaterialApp(
             title: 'Holu',
             debugShowCheckedModeBanner: false,
-            initialRoute: '/',
+            initialRoute: '/splash',
             routes: {
               '/': (context) => BlocProvider(
                     child: IndexHome(),
@@ -53,7 +53,7 @@ class MyApp extends StatelessWidget {
                     child: Favoritos(),
                     bloc: FavoritesBloc(),
                   ),
-              '/prueba':(context) => BlocProvider(
+              '/prueba':(context) => BlocProvider(//fetching data
                 child: MyApp2(),
                 bloc: FavoritesBloc(),
               )
