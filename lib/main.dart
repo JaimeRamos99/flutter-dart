@@ -7,6 +7,7 @@ import './ifood/product/ui/index.dart';
 import './ifood/home/ui/index.dart';
 import './ifood/restaurant/ui/index.dart';
 import './ifood/favorites/ui/index.dart';
+import './ifood/signIn/ui/index.dart';
 import './ifood/landing/bloc/bloc_landing.dart';
 import './ifood/cart/bloc/bloc_cart.dart';
 import './ifood/product/bloc/bloc_product.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
           child: MaterialApp(
             title: 'Holu',
             debugShowCheckedModeBanner: false,
-            initialRoute: '/splash',
+            initialRoute: '/sign',
             routes: {
               '/': (context) => BlocProvider(
                     child: IndexHome(),
@@ -53,10 +54,12 @@ class MyApp extends StatelessWidget {
                     child: Favoritos(),
                     bloc: FavoritesBloc(),
                   ),
-              '/prueba':(context) => BlocProvider(//fetching data
-                child: MyApp2(),
-                bloc: FavoritesBloc(),
-              )
+              '/prueba': (context) => BlocProvider(
+                    //fetching data
+                    child: MyApp2(),
+                    bloc: FavoritesBloc(),
+                  ),
+              '/sign': (context) => BlocProvider(child: SignIn())
             },
           ),
           bloc: UserBloc(),
