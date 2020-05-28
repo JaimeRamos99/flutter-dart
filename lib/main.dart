@@ -8,13 +8,17 @@ import './ifood/home/ui/index.dart';
 import './ifood/restaurant/ui/index.dart';
 import './ifood/favorites/ui/index.dart';
 import './ifood/signIn/ui/index.dart';
+import './ifood/logIn/ui/index.dart';
+
 import './ifood/landing/bloc/bloc_landing.dart';
 import './ifood/cart/bloc/bloc_cart.dart';
 import './ifood/product/bloc/bloc_product.dart';
 import './ifood/home/bloc/bloc_home.dart';
 import './ifood/restaurant/bloc/bloc_restaurant.dart';
 import './ifood/favorites/bloc/bloc_favorites.dart';
+import './ifood/signIn/bloc/bloc_signIn.dart';
 import './ifood/favorites/repository/api.dart';
+import './ifood/logIn/bloc/bloc_logIn.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 
 void main() => runApp(MyApp());
@@ -30,7 +34,7 @@ class MyApp extends StatelessWidget {
           child: MaterialApp(
             title: 'Holu',
             debugShowCheckedModeBanner: false,
-            initialRoute: '/sign',
+            initialRoute: '/logIn',
             routes: {
               '/': (context) => BlocProvider(
                     child: IndexHome(),
@@ -59,7 +63,8 @@ class MyApp extends StatelessWidget {
                     child: MyApp2(),
                     bloc: FavoritesBloc(),
                   ),
-              '/sign': (context) => BlocProvider(child: SignIn())
+              '/sign': (context) => BlocProvider(child: SignIn(), bloc:SignInBloc()),
+              '/logIn': (context)=>BlocProvider(child: LogIn(),bloc: LogInBloc(),)
             },
           ),
           bloc: UserBloc(),

@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
-class LogIn extends StatelessWidget{
+import './background.dart';
+import './form.dart';
+
+class LogIn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    return null;
+    return Stack(
+      children: <Widget>[BackgroundLogIn(), FormPhone()],
+    );
   }
 }

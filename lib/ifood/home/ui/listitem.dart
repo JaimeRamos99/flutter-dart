@@ -30,11 +30,13 @@ class _ItemLista extends State<ItemLista> {
       if (_isLoved) {
         _isLoved = false;
         _heartColor = Colors.grey;
-        Toast.show("Se ha eliminado de tus restaurantes favoritos", context, duration: Toast.LENGTH_LONG, gravity:  Toast.BOTTOM);
+        Toast.show("Se ha eliminado de tus restaurantes favoritos", context,
+            duration: Toast.LENGTH_LONG, gravity: Toast.BOTTOM);
       } else {
         _isLoved = true;
         _heartColor = Colors.redAccent;
-        Toast.show("Se ha agregado a restaurantes favoritos", context, duration: Toast.LENGTH_LONG, gravity:  Toast.BOTTOM);
+        Toast.show("Se ha agregado a restaurantes favoritos", context,
+            duration: Toast.LENGTH_LONG, gravity: Toast.BOTTOM);
       }
     });
   }
